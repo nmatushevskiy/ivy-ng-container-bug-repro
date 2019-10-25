@@ -1,12 +1,5 @@
-<h2>CORRECT:</h2>
-<div cdkDropList cdkDropListOrientation="horizontal" class="example-list" (cdkDropListDropped)="correctDrop($event)">
-  <div *ngFor="let item of firstArray" class="example-box" cdkDrag>{{item}}</div>
-</div>
-
-
-<h2>INCORRECT:</h2>
-<div cdkDropList cdkDropListOrientation="horizontal" class="example-list" (cdkDropListDropped)="incorrectDrop($event)">
-  <ng-container *ngFor="let item of secondArray">
+<div cdkDropList cdkDropListOrientation="horizontal" class="example-list" (cdkDropListDropped)="drop($event)">
+  <ng-container *ngFor="let item of items">
     <div class="example-box" cdkDrag>{{item}}</div>
   </ng-container>
 </div>

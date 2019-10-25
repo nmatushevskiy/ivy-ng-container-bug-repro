@@ -7,7 +7,7 @@ import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  firstArray = [
+  items = [
     'Bronze age',
     'Iron age',
     'Middle ages',
@@ -15,19 +15,7 @@ export class AppComponent {
     'Long nineteenth century'
   ];
 
-  secondArray = [
-    'Bronze age',
-    'Iron age',
-    'Middle ages',
-    'Early modern period',
-    'Long nineteenth century'
-  ];
-
-  correctDrop(event: CdkDragDrop<string[]>): void {
-    moveItemInArray(this.firstArray, event.previousIndex, event.currentIndex);
-  }
-
-  incorrectDrop(event: CdkDragDrop<string[]>): void {
-    moveItemInArray(this.secondArray, event.previousIndex, event.currentIndex);
+  drop(event: CdkDragDrop<string[]>): void {
+    moveItemInArray(this.items, event.previousIndex, event.currentIndex);
   }
 }
