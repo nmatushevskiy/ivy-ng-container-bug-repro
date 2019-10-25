@@ -4,4 +4,4 @@ How to run:
 * ng serve
 
 How to reproduce:
-Try to drag any item in "Incorrect" section.
+* Try dragging any item in the "Incorrect" section
